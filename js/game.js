@@ -3,7 +3,7 @@ class Game {
 
     // Returns a random english word
     static async getWord() {  
-        const result = await fetch('../json/words.json')
+        const result = await fetch('https://raw.githubusercontent.com/words/an-array-of-english-words/master/index.json')
             .then(res => res.json())
             .then(data => {
                 return data[Math.floor(Math.random() * totalWords)];
