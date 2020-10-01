@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Typing Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="play-game">
+            <h3>Type the following word in 
+                <span id="limit"></span> seconds!
+            </h3>
+            <h4 id="given-word"></h4>
+            <div class="loader word-loader"></div>
+            <form id = 'game-form'>
+                <input type="text" id="game-input" placeholder = "Start typing to start the game">
+                <div class="input-underline"></div>
+            </form>
+            <p class = 'time-left'>Time Left : 
+                <span>
+                    <span id="seconds"></span>:<span id="milliseconds"></span>
+                </span>
+            </p>
+            <div id="feedback"></div>
+        </div>
+
+        <div class="game-status">
+            <p>Current Difficulty Level: <span id = "difficulty"></span></p>
+            <p>Total Score: <span id="score"></span></p>
+            <div class="button-container">
+                <button id="restart-game">Restart Game</button>
+                <button id="new-user">New User</button>
+            </div>
+        </div>
+
+        <div class="high-score-container">
+            <h3>High Scores</h3>
+            <div class="high-score-grid">
+                <div class="high-score-names-container">
+                    <h4>Names</h4>
+                    <ul id = "high-score-names">
+                    </ul>
+                </div>
+                <div class="high-score-scores-container">
+                    <h4>Scores</h4>
+                    <ul id = "high-scores">
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="see-more">See More
+                <i class="fas fa-angle-down"></i>
+            </a>
+            <a href="#" class="see-less">See Less
+                <i class="fas fa-angle-up"></i>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Introduction Modal Window -->
+    <div class="modal intro" id = "intro">
+        <h2>Welcome to the</h2>
+        <h2 class="title">Speed Typing Game</h2>
+        <div class="input-container">
+            <form id = "intro-form">
+                <div class="input-container">
+                    <div>
+                        <input type="text" id="name-input" placeholder="Enter Your Name">
+                        <div class="input-underline"></div>
+                    </div>
+                    <button type = "submit">
+                        <i id = 'intro-submit' class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Instruction Modal Window -->
+    <div class="modal instruction-modal">
+        <h3>Instructions</h3>
+        <ol>
+            <li>In this game, you will be given a <strong>random English word</strong>, which you have to type within a <strong>stipulated time</strong>.</li>
+            <li>Your score will be calculated accordingly: 
+                <div class = 'levels-container'>
+                    <div class="score-list-container">
+                        <h4>Upto</h4>
+                        <ul id="score-list"></ul>
+                    </div>
+                    <div class="difficulty-list-container">
+                        <h4>Difficulty</h4>
+                        <ul id="difficulty-list"></ul>
+                    </div>
+                    <div class="points-list-container">
+                        <h4>Points</h4>
+                        <ul id="points-list"></ul>
+                    </div>
+                    <div class="time-limit-list-container">
+                        <h4>Limit</h4>
+                        <ul id="time-limit-list"></ul>
+                    </div>
+                    <div class="bonus-list-container">
+                        <h4>Bonus</h4>
+                        <ul id="bonus-list"></ul>
+                    </div>
+                </div>
+            </li>
+            <li>By scoring well enough, you can make it to the <strong>high scores</strong>.</li>
+        </ol>
+        <p class = 'best-of-luck'>Best of Luck!</p>
+        <p class = 'click-anywhere'>Click anywhere outside to continue</p>
+    </div>
+
+    <!-- Score Modal Window -->
+    <div class="modal score-modal">
+        <h3 class = 'score-modal-title'>Your Score Is</h3>
+        <div class="animated-counter"></div>
+        <h3 class = 'bonus-score'></h3>
+        <p id="score-remarks"></p>
+        <p class = 'click-anywhere'>Click anywhere outside to continue</p>
+    </div>
+
+    <!-- Modal Window -->
+    <div class="overlay"></div>
+
+    <!-- Alert Boxes -->
+    <div class="alert alert-difficulty"></div>
+
+    <!-- Script Files -->
+    <script src="js/dom.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/localstorage.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/game.js"></script>
+    
+</body>
+</html>
