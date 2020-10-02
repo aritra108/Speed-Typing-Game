@@ -3,7 +3,7 @@ const totalWords = 274937, countingAnimationTime = 1000;
 
 const highScoreConfig = {
     initial: 3, 
-    total: 10
+    total: 6
 };
 
 const difficulties = {
@@ -19,8 +19,9 @@ const levels = {
 };
 
 const landmarks = {
-    first: 30, 
-    second: 70
+    first: 0, 
+    second: 30,
+    third: 70
 };
 
 const bonuses = {
