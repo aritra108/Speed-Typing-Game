@@ -253,6 +253,10 @@ input:focus ~ .input-underline {
     text-align: center;
 }
 
+.container > div:last-child {
+    margin-bottom: 40px;
+}
+
 /* Play Game Container */
 .play-game h4 {
     color: var(--secondary-light);
