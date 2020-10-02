@@ -112,7 +112,7 @@ function restartTheGame () {
     UI.displayRestartButton(false);
     UI.displayNewUser(false);
 
-    // Reset the number of input triggered 
+    // Reset the number of input triggered and the alerts 
     inputTriggered = 0;
     alertFirst = 0;
     alertSecond = 0;
@@ -120,10 +120,9 @@ function restartTheGame () {
     // Reset the score 
     status.score = 0;
 
-    // Reset the feedback 
+    // Reset the feedback and the remark in the score modal
     status.feedback = '';
-
-    // Reset the score modal shown property 
+    scoreRemarks.innerHTML = '';
     status.showScoreModal = true;
 
     // Reset the high score position

@@ -60,7 +60,7 @@ class Game {
     // Updates the difficulty, limit, time limit and bonus score of the game 
     static updateStatus() {
 
-        if ( status.score < landmarks.first ) {
+        if ( status.score >= landmarks.first && status.score < landmarks.second) {
 
             status.difficulty = difficulties.first; // Update the difficulty 
             status.limit = levels.first; // Update the limit 
@@ -69,7 +69,7 @@ class Game {
             status.bonus = bonuses.first; // Update the bonus score 
             status.scoreIncrementFactor = incrementFactors.first; // Update the score increment factor 
 
-        } else if ( status.score >= landmarks.first && status.score < landmarks.second ) {
+        } else if ( status.score >= landmarks.second && status.score < landmarks.third ) {
 
             status.difficulty = difficulties.second; 
             status.limit = levels.second; 

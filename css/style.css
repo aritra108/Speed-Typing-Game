@@ -553,39 +553,3 @@ input:focus ~ .input-underline {
 
 }
 
-@media(max-height: 500px) {
-
-    ::-webkit-scrollbar {
-        width: 4px;
-    }
-
-    .container {
-        display: block;
-    }
-
-    .container > div {
-        width: 31%;
-        height: 300px;
-        margin: 10px 20px;
-        position: absolute;
-    }
-
-    .play-game {
-        left: 32%;
-    }
-
-    .game-status {
-        left: 65%;
-    }
-
-    .high-score-container {
-        left: 0%;
-    }
-
-    .instruction-modal {
-        width: 95%;
-        height: 95%;
-        overflow: auto;
-    }
-
-}
